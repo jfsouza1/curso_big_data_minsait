@@ -1,11 +1,11 @@
 #!/bin/bash
-BASEDIR="$( dirname "${BASH_SOUCE[0]}")" && pwd )"
-CONFIG="{BASSEDIR}/../../config/config.sh"
+BASEDIR="$( cd "$( dirname "${BASH_SOUCE[0]}")" && pwd )"
+CONFIG="{BASEDIR}/../../config/config.sh"
 source "${CONFIG}"
 
 echo "Iniciando a criação em ${DATE}"
 
-for table in "{TABLES[@]}"
+for table in "${TABLES[@]}"
 do
     echo "tabela $table"
     cd ../../raw
